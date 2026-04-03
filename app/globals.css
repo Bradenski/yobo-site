@@ -1,26 +1,38 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: #0b0f1a;
+  --color-foreground: #f0f4ff;
+  --color-yobo-blue: #57a8fe;
+  --color-yobo-blue-dim: #3d8edc;
+  --color-surface: #111827;
+  --color-border: #1e2a3a;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+}
+
+.yobo-stat-link {
+  color: #57a8fe;
+  text-shadow: 0 0 18px rgba(87,168,254,0.6);
+  transition: text-shadow 0.2s ease;
+}
+.yobo-stat-link:hover {
+  text-shadow: 0 0 32px rgba(87,168,254,1), 0 0 60px rgba(87,168,254,0.5);
+}
+
+.yobo-cta-btn {
+  background: #57a8fe;
+}
+.yobo-cta-btn:hover {
+  background: #3d8edc;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
