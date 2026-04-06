@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ContactForm } from "./contact-form";
+import { HeroSection } from "./hero-section";
 
 export default function Home() {
   return (
@@ -51,70 +52,7 @@ export default function Home() {
       </header>
 
       <main className="flex-1">
-        {/* Hero */}
-        <section className="relative overflow-hidden px-6 py-32 sm:py-44">
-          {/* Background grid */}
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0"
-            style={{
-              backgroundImage:
-                "linear-gradient(rgba(87,168,254,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(87,168,254,0.04) 1px, transparent 1px)",
-              backgroundSize: "48px 48px",
-            }}
-          />
-          {/* Glow orb */}
-          <div
-            aria-hidden
-            className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2"
-            style={{
-              width: "700px",
-              height: "400px",
-              background:
-                "radial-gradient(ellipse at center, rgba(87,168,254,0.18) 0%, transparent 70%)",
-              filter: "blur(40px)",
-            }}
-          />
-
-          <div className="relative mx-auto max-w-4xl text-center">
-            <div
-              className="mb-6 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium"
-              style={{
-                background: "rgba(87,168,254,0.12)",
-                border: "1px solid rgba(87,168,254,0.25)",
-                color: "#57a8fe",
-              }}
-            >
-              <span
-                className="h-1.5 w-1.5 rounded-full"
-                style={{ background: "#57a8fe" }}
-              />
-              AI-Powered Precision Discharge Platform
-            </div>
-            <h1 className="mb-6 font-bold leading-[1.1] tracking-tight text-white">
-              <span className="block whitespace-nowrap text-4xl sm:text-5xl">
-                Smarter transitions of care.
-              </span>
-              <span className="block text-5xl sm:text-6xl lg:text-7xl" style={{ color: "#57a8fe" }}>
-                Better outcomes.
-              </span>
-            </h1>
-            <p className="mx-auto max-w-xl text-lg leading-relaxed" style={{ color: "rgba(240,244,255,0.6)" }}>
-              Patients fall through the cracks every day as they move between
-              care settings. YOBO brings AI-guided intelligence to close the
-              gaps before they become readmissions.
-            </p>
-            <div className="mt-10 flex justify-center">
-              <a
-                href="#problem"
-                className="text-sm font-medium transition"
-                style={{ color: "rgba(240,244,255,0.5)" }}
-              >
-                Learn more ↓
-              </a>
-            </div>
-          </div>
-        </section>
+        <HeroSection />
 
         {/* Problem */}
         <section
@@ -122,35 +60,69 @@ export default function Home() {
           className="px-6 py-24"
           style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}
         >
-          <div className="mx-auto max-w-3xl">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-widest" style={{ color: "#57a8fe" }}>
+          <div className="mx-auto max-w-5xl">
+            <p className="mb-10 text-xs font-semibold uppercase tracking-widest" style={{ color: "#57a8fe" }}>
               The Problem
             </p>
-            <h2 className="mb-6 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              <a
-                href="https://accpjournals.onlinelibrary.wiley.com/doi/10.1002/jac5.1980"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="yobo-stat-link"
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+              {/* Card 1 */}
+              <div
+                className="rounded-2xl p-8"
+                style={{ background: "#131929" }}
               >
-                70%
-              </a>{" "}
-              of medication errors happen at discharge.
-            </h2>
-            <p className="text-base leading-8" style={{ color: "rgba(240,244,255,0.55)" }}>
-              By 2027,{" "}
-              <a
-                href="https://www.advisory.com/daily-briefing/2025/09/23/readmission-penalties"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="yobo-stat-link"
+                <p className="mb-3 text-5xl font-bold">
+                  <a
+                    href="https://accpjournals.onlinelibrary.wiley.com/doi/10.1002/jac5.1980"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="yobo-stat-link"
+                  >
+                    70%
+                  </a>
+                </p>
+                <p className="text-sm leading-relaxed text-white">
+                  of medication errors occur at discharge
+                </p>
+              </div>
+              {/* Card 2 */}
+              <div
+                className="rounded-2xl p-8"
+                style={{ background: "#131929" }}
               >
-                8 in 10 hospitals
-              </a>{" "}
-              are expected to face penalties for excess readmissions.
-              Medications, risk signals, and follow-up needs rarely travel with the patient, leaving care teams on the receiving end
-               to make decisions blind. The result is preventable harm, avoidable readmissions, and a system where no one is accountable for the gap.
-            </p>
+                <p className="mb-3 text-5xl font-bold">
+                  <a
+                    href="https://www.advisory.com/daily-briefing/2025/09/23/readmission-penalties"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="yobo-stat-link"
+                  >
+                    8/10
+                  </a>
+                </p>
+                <p className="text-sm leading-relaxed text-white">
+                  hospitals are expected to face penalties for excess readmissions
+                </p>
+              </div>
+              {/* Card 3 */}
+              <div
+                className="rounded-2xl p-8"
+                style={{ background: "#131929" }}
+              >
+                <p className="mb-3 text-5xl font-bold">
+                  <a
+                    href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2738592/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="yobo-stat-link"
+                  >
+                    &gt;30%
+                  </a>
+                </p>
+                <p className="text-sm leading-relaxed text-white">
+                  reduction in readmission when discharge programs are optimized
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -168,16 +140,16 @@ export default function Home() {
               The Solution
             </p>
             <h2 className="mb-6 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              AI-guided care intelligence,
-              <br className="hidden sm:block" /> built for transitions.
+              AI-guided care,
+              <br className="hidden sm:block" /> closing the gaps.
             </h2>
+            <blockquote className="border-l-4 border-[#1D6FF2] pl-6 italic text-xl" style={{ color: "rgba(240,244,255,0.85)" }}>
+  "We&apos;re setting patients up to stumble on their first step out the door."
+</blockquote>
             <p className="text-base leading-8" style={{ color: "rgba(240,244,255,0.55)" }}>
-              YOBO surfaces the right patient signals at the right moment —
-              giving care teams a unified, intelligent view across the transition
-              continuum. Our platform connects fragmented data, anticipates risk,
-              and orchestrates proactive outreach so no patient falls through the
-              cracks. We&apos;re not just alerting clinicians to problems; we&apos;re
-              equipping them with the context to act before a crisis unfolds.
+              That's how one clinician described the state of care transitions today. 
+              YOBO exists to change that by closing care gaps before they become crises.
+              We triage patient risk, aggregate fragmented clinical information, and help teams act before a patient stumbles.
             </p>
           </div>
         </section>
