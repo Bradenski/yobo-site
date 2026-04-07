@@ -74,10 +74,10 @@ export function HeroSection() {
           AI-Powered Precision Discharge Platform
         </div>
         <h1 className="mb-6 font-bold leading-[1.1] tracking-tight text-white">
-          <span className="block whitespace-nowrap text-3xl md:text-6xl">
+          <span className="block md:whitespace-nowrap text-2xl md:text-6xl">
             Smarter transitions of care.
           </span>
-          <span className="block text-3xl md:text-6xl" style={{ color: "#57a8fe" }}>
+          <span className="block text-2xl md:text-6xl" style={{ color: "#57a8fe" }}>
             Better outcomes.
           </span>
         </h1>
