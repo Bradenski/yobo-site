@@ -146,11 +146,23 @@ export default function Home() {
             <blockquote className="border-l-4 border-[#1D6FF2] pl-6 italic text-xl" style={{ color: "rgba(240,244,255,0.85)" }}>
   "We&apos;re setting patients up to stumble on their first step out the door."
 </blockquote>
-            <p className="text-base leading-8" style={{ color: "rgba(240,244,255,0.55)" }}>
-              That's how one clinician described the state of care transitions today. 
+            <p className="mb-10 text-base leading-8" style={{ color: "rgba(240,244,255,0.55)" }}>
+              That's how one clinician described the state of care transitions today.
               YOBO exists to change that by closing care gaps before they become crises.
               We triage patient risk, aggregate fragmented clinical information, and help teams act before a patient stumbles.
             </p>
+            <div
+              className="overflow-hidden rounded-xl"
+              style={{ border: "1px solid rgba(87,168,254,0.15)", aspectRatio: "16/9" }}
+            >
+              <iframe
+                src="https://www.youtube.com/embed/Wzp_nUriAno"
+                title="YOBO Health"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="h-full w-full"
+              />
+            </div>
           </div>
         </section>
 
